@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books for Hope | Salvation Army Donation Drive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        :root {
+            --primary: #8B4513;  /* Saddle Brown */
+            --secondary: #A0522D;  /* Sienna */
+            --accent: #F5DEB3;  /* Wheat */
+            --light: #FFF8DC;  /* Cornsilk */
+            --dark: #3E2723;  /* Dark Brown */
+            --highlight: #D2691E;  /* Chocolate */
+        }
+        
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.6;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d2b48c' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: var(--accent);
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid var(--highlight);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+        
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'Palatino', serif;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1549056572-75914d6d0e51?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover;
+            color: var(--accent);
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
+            border-bottom: 5px solid var(--highlight);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-family: 'Palatino', serif;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin: 0 auto 30px;
+            color: #f0f0f0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            background-color: #e6e6e6;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            margin-left: 15px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary);
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            font-family: 'Palatino', serif;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--highlight);
+        }
+        
+        .about-section {
+            background-color: var(--accent);
+            border-radius: 10px;
+            padding: 50px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-top: -50px;
+            position: relative;
+            border: 2px solid var(--primary);
+        }
+        
+        .about-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 2;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-family: 'Palatino', serif;
+        }
+        
+        .about-image {
+            flex: 1;
+            background-color: white;
+            border-radius: 10px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--primary);
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            max-height: 100%;
+            height: auto;
+        }
+        
+        .survey-section {
+            background-color: var(--light);
+            padding: 80px 0;
+            border-top: 2px solid var(--highlight);
+            border-bottom: 2px solid var(--highlight);
+        }
+        
+        .survey-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 50px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--primary);
+        }
+        
+        .survey-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .survey-item {
+            background: var(--accent);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--primary);
+            border: 1px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+        
+        .survey-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .survey-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-family: 'Palatino', serif;
+        }
+        
+        .stat-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-box {
+            background: rgba(139, 69, 19, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+            border: 1px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-box:hover {
+            background: rgba(139, 69, 19, 0.2);
+        }
+        
+        .stat-box h4 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .stat-box p {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .donation-section {
+            background: linear-gradient(135deg, rgba(62, 39, 35, 0.9), rgba(139, 69, 19, 0.9)), url('https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-top: 3px solid var(--highlight);
+            border-bottom: 3px solid var(--highlight);
+        }
+        
+        .donation-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .step-card {
+            background: rgba(245, 222, 179, 0.1);
+            padding: 40px 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(245, 222, 179, 0.3);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-10px);
+            background: rgba(245, 222, 179, 0.15);
+        }
+        
+        .step-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .step-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .team {
+            background-color: var(--light);
+            padding-bottom: 60px;
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .member-card {
+            background: var(--accent);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 2px solid var(--primary);
+        }
+        
+        .member-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-img {
+            height: 200px;
+            background: linear-gradient(45deg, var(--dark), var(--primary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 3px solid var(--highlight);
+        }
+        
+        .member-img i {
+            font-size: 6rem;
+            color: rgba(245, 222, 179, 0.7);
+        }
+        
+        .member-info {
+            padding: 25px;
+        }
+        
+        .member-info h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-family: 'Palatino', serif;
+        }
+        
+        .member-info .role {
+            color: #555;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .member-info p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: var(--accent);
+            padding: 50px 0 20px;
+            text-align: center;
+            border-top: 3px solid var(--highlight);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section {
+            max-width: 300px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--accent);
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .footer-section p {
+            margin-bottom: 15px;
+            color: #d2b48c;
+        }
+        
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(210, 180, 140, 0.1);
+            color: #d2b48c;
+        }
+
+        .donation-section .section-title h2,
+        .donation-section .section-title p {
+            color: var(--accent);
+        }
+        
+        .donation-section .section-title h2::after {
+            background-color: var(--accent);
+        }
+        
+        /* Poverty Research Section */
+        .poverty-section {
+            background-color: white;
+            padding: 80px 0;
+            border-top: 2px solid var(--highlight);
+            border-bottom: 2px solid var(--highlight);
+        }
+        
+        .research-container {
+            background-color: var(--accent);
+            border-radius: 10px;
+            padding: 50px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--primary);
+        }
+        
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .research-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+        
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .research-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-family: 'Palatino', serif;
+        }
+        
+        .research-card .stat {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .book-icon {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--primary);
+            margin: 20px 0;
+        }
+        
+        .book-quote {
+            font-style: italic;
+            padding: 20px;
+            border-left: 3px solid var(--primary);
+            margin: 20px 0;
+            background: rgba(139, 69, 19, 0.05);
+        }
+        
+        .causes-list {
+            columns: 2;
+            column-gap: 20px;
+            margin: 20px 0;
+        }
+        
+        /* NEW CONTRIBUTIONS SECTION */
+        .contributions-section {
+            background-color: var(--light);
+            padding: 80px 0;
+            border-top: 2px solid var(--highlight);
+            border-bottom: 2px solid var(--highlight);
+        }
+        
+        .contributions-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .contribution-card {
+            background-color: var(--accent);
+            border-radius: 10px;
+            margin: 40px 0;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 2px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+        
+        .contribution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .contribution-header {
+            background: linear-gradient(to right, var(--dark), var(--primary));
+            color: var(--accent);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .member-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            overflow: hidden;
+            background: linear-gradient(45deg, #3E2723, #8B4513);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+        
+        .member-avatar i {
+            opacity: 0.8;
+        }
+        
+        .member-title h3 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .member-title .role {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .contribution-content {
+            display: flex;
+            padding: 0;
+            min-height: 300px;
+        }
+        
+        .contribution-image {
+            flex: 1;
+            background-color: #eee;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-right: 2px solid var(--primary);
+        }
+        
+        .contribution-image img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contribution-details {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .contribution-details h4 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--highlight);
+        }
+        
+        .contribution-details ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .contribution-details li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .contribution-details li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .contribution-stats {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: rgba(139, 69, 19, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 120px;
+            border: 1px solid var(--primary);
+            text-align: center;
+        }
+        
+        .stat-item .number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+                margin-bottom: 10px;
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 10px auto;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                width: 100%;
+            }
+            
+            .causes-list {
+                columns: 1;
+            }
+            
+            .contribution-content {
+                flex-direction: column;
+            }
+            
+            .contribution-image {
+                min-height: 250px;
+                border-right: none;
+                border-bottom: 2px solid var(--primary);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 80px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .stat-box {
+                min-width: 100%;
+            }
+        }
+
+        /* Khusheen specific styling */
+        .khusheen-card {
+            background-color: #f8d7da;
+            border: 2px dashed #dc3545;
+        }
+        
+        .khusheen-avatar {
+            background: linear-gradient(45deg, #dc3545, #f8d7da);
+        }
+        
+        .khusheen-title {
+            color: #dc3545;
+        }
+        
+        .khusheen-stats .stat-item {
+            background-color: #f8d7da;
+            border: 1px dashed #dc3545;
+        }
+        
+        .khusheen-stats .number {
+            color: #dc3545;
+        }
+
+        /* NEW EVIDENCES SECTION */
+        .evidences-section {
+            background-color: var(--light);
+            padding: 80px 0;
+            border-top: 2px solid var(--highlight);
+            border-bottom: 2px solid var(--highlight);
+        }
+        
+        .evidences-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .upload-area {
+            background-color: white;
+            border: 2px dashed var(--primary);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .upload-area:hover {
+            background-color: rgba(139, 69, 19, 0.05);
+        }
+        
+        .upload-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .upload-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-family: 'Palatino', serif;
+        }
+        
+        .upload-text p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .upload-btn {
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .upload-btn:hover {
+            background-color: #e6e6e6;
+        }
+        
+        #file-input {
+            display: none;
+        }
+        
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .evidence-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border: 2px solid var(--primary);
+        }
+        
+        .evidence-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .evidence-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .evidence-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .evidence-card:hover .evidence-image img {
+            transform: scale(1.05);
+        }
+        
+        .evidence-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .evidence-card:hover .evidence-overlay {
+            opacity: 1;
+        }
+        
+        .evidence-overlay button {
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .evidence-overlay button:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .evidence-details {
+            padding: 20px;
+        }
+        
+        .evidence-details h4 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-family: 'Palatino', serif;
+        }
+        
+        .evidence-details p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .evidence-date {
+            color: #888;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 10px;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 200;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .modal-content {
+            background-color: var(--light);
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            border: 2px solid var(--primary);
+        }
+        
+        .close-modal {
+            color: var(--primary);
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: var(--dark);
+        }
+        
+        .modal-image {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .modal-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-family: 'Palatino', serif;
+        }
+        
+        .modal-description {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .modal-date {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        /* Form styles */
+        .evidence-form label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .evidence-form input,
+        .evidence-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid var(--primary);
+            border-radius: 5px;
+            font-family: 'Georgia', serif;
+        }
+        
+        .evidence-form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .form-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+        
+        .form-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .form-btn.cancel {
+            background-color: #e6e6e6;
+            color: var(--dark);
+        }
+        
+        .form-btn.save {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+        
+        .form-btn.cancel:hover {
+            background-color: #d9d9d9;
+        }
+        
+        .form-btn.save:hover {
+            background-color: #d4c3a0;
+        }
+        
+        /* Additional styling for donation and team sections */
+        .donation-instructions {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(245, 222, 179, 0.3);
+            margin-top: 30px;
+        }
+        
+        .donation-instructions h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        
+        .donation-instructions ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .donation-instructions li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .donation-instructions li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .team-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-open"></i>
+                    <div class="logo-text">Books for <span>Hope</span></div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">Our Project</a></li>
+                        <li><a href="#survey">Survey Results</a></li>
+                        <li><a href="#research">Poverty Research</a></li>
+                        <li><a href="#contributions">Our Contributions</a></li>
+                        <li><a href="#evidences">Evidences</a></li>
+                        <li><a href="#donate">Donate</a></li>
+                      
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Supporting the Salvation Army in Hong Kong</h1>
+            <p>A student-led initiative to provide books and resources to those in need</p>
+            <div class="hero-buttons">
+                <a href="#donate" class="btn">Donate Books</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="about-section">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>About Our Project</h3>
+                        <p>We are a group of KGV students - Ryan, Lucinda, and Khusheen - running a book donation drive to support the Salvation Army in Hong Kong. Our goal is to collect educational resources and books for underprivileged children and families in our community.</p>
+                        
+                        <p>The Salvation Army has been serving Hong Kong since 1930, providing essential services to those in need. They operate community centers, shelters, and educational programs throughout the city.</p>
+                        
+                        <p>Through our survey of KGV students, we discovered that while many are aware of poverty issues, few have direct experience. This project is our way of turning awareness into action and making a tangible difference in our community.</p>
+                        
+                        <p>All books collected will be donated to Salvation Army community centers to support their educational programs for children from low-income families.</p>
+                        
+                        <div class="book-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        
+                        <div class="book-quote">
+                            "A book is a dream that you hold in your hand." - Neil Gaiman
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="data:image/png;base64,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" alt="Salvation Army Logo" style="max-width: 80%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Survey Section -->
+    <section id="survey" class="survey-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Survey Findings</h2>
+                <p>We surveyed 13 KGV students about poverty awareness in Hong Kong</p>
+            </div>
+            
+            <div class="survey-container">
+                <div class="survey-grid">
+                    <div class="survey-item">
+                        <h3>Poverty Status</h3>
+                        <p>All 13 respondents indicated they do not live in poverty, reflecting the economic background of KGV students.</p>
+                        <div class="stat-row">
+                            <div class="stat-box">
+                                <h4>100%</h4>
+                                <p>Not in poverty</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="survey-item">
+                        <h3>Encountering Poverty</h3>
+                        <p>Frequency of encountering people living in poverty:</p>
+                        <div class="stat-row">
+                            <div class="stat-box">
+                                <h4>61.5%</h4>
+                                <p>Very rarely</p>
+                            </div>
+                            <div class="stat-box">
+                                <h4>23.1%</h4>
+                                <p>Occasionally</p>
+                            </div>
+                            <div class="stat-box">
+                                <h4>15.4%</h4>
+                                <p>Frequently</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="survey-item">
+                        <h3>Understanding Poverty</h3>
+                        <p>92.3% of students understand that poverty involves more than just lacking money.</p>
+                        <div class="stat-row">
+                            <div class="stat-box">
+                                <h4>92.3%</h4>
+                                <p>Understands the concept of Poverty</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="survey-item">
+                        <h3>Willingness to Help</h3>
+                        <p>92.3% of respondents expressed willingness to donate books or toys to support children in poverty.</p>
+                        <div class="stat-row">
+                            <div class="stat-box">
+                                <h4>92.3%</h4>
+                                <p>Willing to donate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poverty Research Section -->
+    <section id="research" class="poverty-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Understanding Poverty</h2>
+                <p>Why our work matters in the Hong Kong context</p>
+            </div>
+            
+            <div class="research-container">
+                <div class="research-grid">
+                    <div class="research-card">
+                        <h3>Hong Kong Poverty Statistics</h3>
+                        <p>Hong Kong has one of the highest wealth disparities in the developed world:</p>
+                        <div class="stat">1.65M</div>
+                        <p>People live below the poverty line (2023)</p>
+                        <div class="stat">23.6%</div>
+                        <p>Poverty rate - highest in 12 years</p>
+                        <div class="stat">1 in 5</div>
+                        <p>Children live in poverty</p>
+                    </div>
+                    
+                    <div class="research-card">
+                        <h3>Causes of Poverty</h3>
+                        <p>Poverty in Hong Kong stems from multiple complex factors:</p>
+                        <ul class="causes-list">
+                            <li><strong>High cost of living:</strong> World's most expensive housing market</li>
+                            <li><strong>Income inequality:</strong> Top 10% earn 44% of total income</li>
+                            <li><strong>Aging population:</strong> 20% are elderly with limited support</li>
+                            <li><strong>Structural unemployment:</strong> Mismatch of skills and opportunities</li>
+                            <li><strong>Limited social mobility:</strong> Difficult to escape poverty cycles</li>
+                            <li><strong>COVID-19 impact:</strong> Increased unemployment to 7.2%</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="research-card">
+                        <h3>Why Books Matter</h3>
+                        <p>Education is the most powerful weapon against poverty:</p>
+                        <div class="stat">3x</div>
+                        <p>More likely to escape poverty with access to books</p>
+                        <div class="stat">60%</div>
+                        <p>Of low-income homes have no children's books</p>
+                        <div class="book-quote">
+                            "The more that you read, the more things you will know. The more that you learn, the more places you'll go." - Dr. Seuss
+                        </div>
+                    </div>
+                    
+                    <div class="research-card">
+                        <h3>Salvation Army Impact</h3>
+                        <p>Providing vital services to Hong Kong's vulnerable:</p>
+                        <div class="stat">80+</div>
+                        <p>Social service units across HK</p>
+                        <div class="stat">15</div>
+                        <p>Family Stores accepting donations</p>
+                        <div class="stat">35</div>
+                        <p>Schools providing education</p>
+                        <div class="stat">25M+</div>
+                        <p>People served annually</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW CONTRIBUTIONS SECTION -->
+    <section id="contributions" class="contributions-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Contributions</h2>
+                <p>How each team member made a difference</p>
+            </div>
+            
+            <div class="contributions-container">
+                <!-- Ryan's Contribution -->
+                <div class="contribution-card">
+                    <div class="contribution-header">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="member-title">
+                            <h3>Ryan</h3>
+                            <div class="role">Project Leader</div>
+                        </div>
+                    </div>
+                    
+                    <div class="contribution-content">
+                        <div class="contribution-image">
+                            <img src="img/Profile.jpeg" alt="Ryan coordinating with Salvation Army">
+                        </div>
+                        <div class="contribution-details">
+                            <h4>Project Leader</h4>
+                            <ul>
+                                <li>Organized the entire project from conception to execution</li>
+                                <li>Coordinated with Salvation Army representatives to arrange drop-off logistics</li>
+                                <li>Managed the donation drive schedule and volunteer assignments</li>
+                                <li>Created surveys and posters to raise awareness across KGV</li>
+                                <li>Developed the project timeline and ensured all milestones were met</li>
+                            </ul>
+                            
+                            <div class="contribution-stats">
+                                <div class="stat-item">
+                                    <span class="number">10+ hours</span>
+                                    <span>Spent on coding website</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="number">600+</span>
+                                    <span>Books and toys collected</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lucinda's Contribution -->
+                
+  
+
+
+                    </div>
+                
+                
+                <div class="evidence-grid">
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books for Hope | Salvation Army Donation Drive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 原有CSS样式保持不变 */
+        /* 新增模态窗口样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 1200px;
+            position: relative;
+            animation-name: modalFade;
+            animation-duration: 0.4s;
+        }
+
+        @keyframes modalFade {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        .close-modal {
+            color: #aaa;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .close-modal:hover,
+        .close-modal:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-image {
+            width: 100%;
+            max-height: 600px;
+            object-fit: contain;
+            margin: 20px 0;
+        }
+
+        .modal-details {
+            padding: 20px;
+        }
+
+        .modal-title {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .modal-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- 原有页面内容保持不变 -->
+
+    <!-- 证据部分修改 -->
+    <section id="evidences" class="evidences-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Evidences</h2>
+                <p>Photos and documentation of our donation drive</p>
+            </div>
+
+            <div class="evidence-grid">
+                <!-- 证据卡片1 -->
+                <div class="evidence-card">
+                    <div class="evidence-image">
+                        <img src="https://cdn.glitch.global/9a2143d0-d249-4762-99a9-184d9360a9b8/book%20drive.jpg?v=1748785609887" alt="Book donation collection">
+                        <div class="evidence-overlay">
+                            <button onclick="openModal('modal1')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="evidence-details">
+                        <h4>Putting Donation Boxes In HKUST</h4>
+                        <p>People donating books and toys</p>
+                        <span class="evidence-date">May, 2025</span>
+                    </div>
+                </div>
+
+                <div class="evidence-card">
+                    <div class="evidence-image">
+                        <img src="" alt="Donation box in kgv">
+                        <div class="evidence-overlay">
+                            <button onclick="openModal('modal2')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="evidence-details">
+                        <h4>Donation Boxes in KGV</h4>
+                        <p>Students contributing to help the uneducated</p>
+                        <span class="evidence-date">26th - 30th May, 2025</span>
+                    </div>
+                </div>
+
+                <!-- 证据卡片3 -->
+                <div class="evidence-card">
+                    <div class="evidence-image">
+                        <img src="https://cdn.glitch.global/9a2143d0-d249-4762-99a9-184d9360a9b8/WhatsApp%20Image%202025-06-01%20at%2015.23.31.jpeg?v=1748786938562" alt="Packing donations for delivery">
+                        <div class="evidence-overlay">
+                            <button onclick="openModal('modal3')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="evidence-details">
+                        <h4>Categorizing all the donations</h4>
+                        <p>Boxes of books are ready to be delivered to Salvation Army centers</p>
+                        <span class="evidence-date">31st May, 2025</span>
+                    </div>
+                </div>
+
+               
+                <div class="evidence-card">
+                    <div class="evidence-image">
+                        <img src="img/Donation.jpeg" alt="Salvation Army staff receiving donations">
+                        <div class="evidence-overlay">
+                            <button onclick="openModal('modal4')">View Details</button>
+                        </div>
+                    </div>
+                    <div class="evidence-details">
+                        <h4>Donation Day!!!</h4>
+                        <p>Donated 600+ books and toys to the salvation donation centre</p>
+                        <span class="evidence-date">June 1st, 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
+            <img src="img/book_drive.jpg" alt="Book donation collection" class="modal-image">
+         
+            <div class="modal-details">
+                <h2 class="modal-title">Putting Donation Boxes In HKUST</h2>
+                <p class="modal-description">
+                    On the first week of May, we placed donation boxes at HKUST campus. 
+                    Students and staff actively contributed throughout the month, with many dropping off bags of gently used books 
+                    and educational toys. 
+              </p>
+                <p><strong>Key Details:</strong></p>
+                <ul>
+                    <li>Collection Date: May 30th, 2025</li>
+                    <li>Items Collected: 300+ books, 300+ toys</li>
+                    <li>Volunteers Involved: 1 team member</li>
+                </ul>
+            </div>
+        </div>
+   
+
+    
+  
+  
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
+            <img src="https://picsum.photos/seed/bookdonation2/600/400" alt="Sorting donated books" class="modal-image">
+            <div class="modal-details">
+                <h2 class="modal-title">Donation Boxes in KGV</h2>
+                <p class="modal-description">
+                    Our school community showed incredible support! 
+                    Students from all grades contributed, and we even had teachers 
+                    organize classroom donations. .
+                </p>
+                <p><strong>Highlights:</strong></p>
+                <ul>
+                    <li>Collection Period: May 26th - 30th</li>
+                    <li>Most Popular Books: Children's storybooks and science textbooks</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal3')">&times;</span>
+            <img src="img/Sorting2.jpeg" alt="Packing donations for delivery" class="modal-image">
+            <div class="modal-details">
+                <h2 class="modal-title">Categorizing all the donations</h2>
+                <p class="modal-description">
+                    On May 31st, I (Ryan) spent the day sorting and categorizing donations. 
+                    I organized books by age group (preschool, primary, secondary) and 
+                    checked each item for condition. This photo shows me packing boxes 
+                    for the Salvation Army center.
+                </p>
+                <p><strong>Process Steps:</strong></p>
+                <ol>
+                    <li>Cleaning all items</li>
+                    <li>Sorting into educational materials, storybooks, and toys</li>
+                    <li>Packing into 15 labeled boxes/bags for delivery</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- 证据4模态窗口 -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal4')">&times;</span>
+            <img src="https://cdn.glitch.global/9a2143d0-d249-4762-99a9-184d9360a9b8/WhatsApp%20Image%202025-06-01%20at%2015.23.25.jpeg?v=1748787495150" alt="Salvation Army staff receiving donations" class="modal-image">
+            <div class="modal-details">
+                <h2 class="modal-title">Donation Day!!!</h2>
+                <p class="modal-description">
+                    The most rewarding day! We delivered 300+ books and 300+ toys to the 
+                    Salvation Army donation centre. Staff members helped us unload the 
+                    boxes and expressed gratitude for supporting their educational programs. 
+                    This photo captures our team with Salvation Army representatives.
+                </p>
+                <p><strong>Impact Stats:</strong></p>
+                <ul>
+                    <li>Total Items Donated: 740</li>
+                    <li>Number of Centers Served: 5</li>
+                    <li>Thank You Notes Received: 23 from grateful families</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新增JavaScript代码 -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // 点击模态窗口外部关闭
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+          
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donate" class="donation-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Make a Donation</h2>
+                <p>Help us provide books and resources to children in need</p>
+            </div>
+            
+            <div class="donation-steps">
+                <div class="step-card">
+                    <i class="fas fa-book"></i>
+                    <h3>1. Gather Books</h3>
+                    <p>Collect gently used or new children's books, educational materials, and toys.</p>
+                </div>
+                
+                <div class="step-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>2. Drop Off</h3>
+                    <p>Bring your donations to the designated collection point at KGV School.</p>
+                </div>
+                
+                <div class="step-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>3. Impact Lives</h3>
+                    <p>Your donations will be distributed to Salvation Army centers to support children in need.</p>
+                </div>
+            </div>
+            
+            <div class="donation-instructions">
+                <h3>Donation Guidelines</h3>
+                <ul>
+                    <li>Books should be in good condition with no missing pages or damage</li>
+                    <li>Educational materials such as textbooks, workbooks, and puzzles are welcome</li>
+                    <li>Toys should be clean, in good working condition, and appropriate for children</li>
+                    <li>Donations can be dropped off at KGV School in May, 2025</li>
+              
+            
+                  
+                 
