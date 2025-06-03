@@ -109,18 +109,24 @@
             font-weight: 500;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            padding: 5px 10px;
+            padding: 0 10px;
             border-radius: 4px;
             position: relative;
+            display: inline-block;
+        }
+        
+        nav a.active, nav a:focus {
+            color: var(--highlight);
         }
         
         nav a::after {
             content: '';
             position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
             left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
             background-color: var(--accent);
             transition: width 0.3s ease;
         }
@@ -219,7 +225,7 @@
         
         .btn:hover {
             background-color: #e6e6e6;
-            transform: translateY(-3px);
+            transform: translateY(-3px) scale(1.05);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
         }
         
@@ -255,7 +261,7 @@
             padding: 80px 20px;
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
         }
         
         section.visible {
@@ -916,17 +922,24 @@
         }
         
         .modal-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
-            height: 400px;
+            max-width: 100%;
             margin-bottom: 20px;
             border-radius: 10px;
             overflow: hidden;
         }
         
         .modal-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            max-height: 400px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
         }
         
         .modal-title {
@@ -988,6 +1001,16 @@
         .footer-section p {
             margin-bottom: 15px;
             color: #d2b48c;
+        }
+        
+        .footer-section .social-icons a {
+            color: var(--accent);
+            margin-right: 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .footer-section .social-icons a:hover {
+            color: var(--highlight);
         }
         
         .footer-bottom {
@@ -1372,7 +1395,7 @@
                             <h4>Project Leader</h4>
                             <ul>
                                 <li>Organized the entire project from conception to execution</li>
-                                <li>Coordinated with Salvation Army to arrange time for donation drop off</li>
+                                <li>Coordinated with Salvation Army representatives to arrange drop-off logistics</li>
                                 <li>Managed the donation drive schedule and volunteer assignments</li>
                                 <li>Created surveys and posters to raise awareness across KGV</li>
                                 <li>Developed the project timeline and ensured all milestones were met</li>
@@ -1384,7 +1407,7 @@
                                     <span>Spent on coding website</span>
                                 </div>
                                 <div class="stat-item">
-                                    <span class="number">700+</span>
+                                    <span class="number">600+</span>
                                     <span>Books and toys collected</span>
                                 </div>
                             </div>
@@ -1535,13 +1558,15 @@
                 <h2 class="modal-title">Donation Day!!!</h2>
                 <p class="modal-description">
                     The most rewarding day! We delivered 300+ books and 300+ toys to the 
-                    Salvation Army donation centre. This p[icture shows me donating the books and toys to the Salvation Army.
+                    Salvation Army donation centre. Staff members helped us unload the 
+                    boxes and expressed gratitude for supporting their educational programs. 
+                    This photo captures our team with Salvation Army representatives.
                 </p>
                 <p><strong>Impact Stats:</strong></p>
                 <ul>
                     <li>Total Items Donated: 740</li>
                     <li>Number of Centers Served: 5</li>
-                    
+                    <li>Thank You Notes Received: 23 from grateful families</li>
                 </ul>
             </div>
         </div>
@@ -1606,9 +1631,9 @@
                     <h3>Follow Us</h3>
                     <p>Connect with us on social media for updates on our donation drive.</p>
                     <div class="social-icons">
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-twitter"></i>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
@@ -1620,6 +1645,51 @@
     </footer>
 
     <script>
+        // Enhanced navigation: persistent active state, accessibility, and hash support
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        const sections = document.querySelectorAll('section');
+        let navClicked = false;
+        let navClickTimeout;
+
+        function setActiveNav(link) {
+            navLinks.forEach(l => {
+                l.classList.remove('active');
+                l.removeAttribute('aria-current');
+            });
+            if (link) {
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
+            }
+        }
+
+        navLinks.forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                setActiveNav(this);
+                navClicked = true;
+                clearTimeout(navClickTimeout);
+                navClickTimeout = setTimeout(() => { navClicked = false; }, 2000);
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // On page load, highlight nav if hash exists
+        window.addEventListener('DOMContentLoaded', function() {
+            if (window.location.hash) {
+                const hash = window.location.hash;
+                const link = document.querySelector('nav a[href="' + hash + '"]');
+                if (link) setActiveNav(link);
+            } else {
+                setActiveNav(navLinks[0]); // Default to first nav item
+            }
+        });
+
         // Loading animation
         window.addEventListener('load', function() {
             const loading = document.getElementById('loading');
@@ -1628,9 +1698,10 @@
             }, 1000);
         });
 
-        // Section reveal animation
+        // Section reveal animation and nav highlight
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -1644,6 +1715,26 @@
             
             sections.forEach(section => {
                 observer.observe(section);
+            });
+
+            // Highlight nav link on scroll, unless recently clicked
+            window.addEventListener('scroll', () => {
+                if (navClicked) return;
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 80;
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                let found = false;
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === '#' + current) {
+                        setActiveNav(link);
+                        found = true;
+                    }
+                });
+                if (!found) setActiveNav(null);
             });
 
             // Stats animation
