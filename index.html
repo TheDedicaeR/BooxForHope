@@ -22,11 +22,37 @@
             --highlight: #D2691E;  
         }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
             background-color: var(--light);
             color: #333;
             line-height: 1.6;
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d2b48c' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d2b48c' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.1;
+            z-index: -1;
+            animation: moveBackground 100s linear infinite;
+        }
+        
+        @keyframes moveBackground {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 1000px 1000px;
+            }
         }
         
         header {
@@ -85,6 +111,22 @@
             transition: all 0.3s ease;
             padding: 5px 10px;
             border-radius: 4px;
+            position: relative;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
         }
         
         nav a:hover {
@@ -99,6 +141,10 @@
             padding: 120px 20px;
             position: relative;
             border-bottom: 5px solid var(--highlight);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         
         .hero-content {
@@ -106,6 +152,18 @@
             z-index: 2;
             max-width: 800px;
             margin: 0 auto;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .hero h1 {
@@ -135,6 +193,28 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255,255,255,0.3),
+                rgba(255,255,255,0)
+            );
+            transform: rotate(30deg);
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover::after {
+            left: 100%;
         }
         
         .btn:hover {
@@ -155,8 +235,32 @@
             color: white;
         }
         
+        .hero-buttons .btn {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(245, 222, 179, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(245, 222, 179, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(245, 222, 179, 0);
+            }
+        }
+        
         section {
             padding: 80px 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         .section-title {
@@ -182,6 +286,16 @@
             width: 80px;
             height: 4px;
             background-color: var(--highlight);
+            animation: underlineGrow 1.5s ease-out;
+        }
+        
+        @keyframes underlineGrow {
+            from {
+                width: 0;
+            }
+            to {
+                width: 80px;
+            }
         }
         
         .about-section {
@@ -230,6 +344,45 @@
             height: auto;
         }
         
+        .book-icon {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--primary);
+            margin: 20px 0;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        .book-icon i {
+            display: inline-block;
+            animation: bookOpen 8s infinite ease-in-out;
+        }
+        
+        @keyframes bookOpen {
+            0%, 100% {
+                transform: rotateY(0);
+            }
+            50% {
+                transform: rotateY(20deg);
+            }
+        }
+        
+        .book-quote {
+            font-style: italic;
+            padding: 20px;
+            border-left: 3px solid var(--primary);
+            margin: 20px 0;
+            background: rgba(139, 69, 19, 0.05);
+        }
+        
         .survey-section {
             background-color: var(--light);
             padding: 80px 0;
@@ -259,12 +412,12 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             border-left: 4px solid var(--primary);
             border: 1px solid var(--primary);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .survey-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
         
         .survey-item h3 {
@@ -300,6 +453,7 @@
             font-size: 1.8rem;
             color: var(--primary);
             margin-bottom: 5px;
+            transition: all 1s ease;
         }
         
         .stat-box p {
@@ -308,168 +462,6 @@
             color: var(--dark);
         }
         
-        .donation-section {
-            background: linear-gradient(135deg, rgba(62, 39, 35, 0.9), rgba(139, 69, 19, 0.9)), url('https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-            border-top: 3px solid var(--highlight);
-            border-bottom: 3px solid var(--highlight);
-        }
-        
-        .donation-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .step-card {
-            background: rgba(245, 222, 179, 0.1);
-            padding: 40px 20px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(245, 222, 179, 0.3);
-        }
-        
-        .step-card:hover {
-            transform: translateY(-10px);
-            background: rgba(245, 222, 179, 0.15);
-        }
-        
-        .step-card i {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: white;
-        }
-        
-        .step-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .team {
-            background-color: var(--light);
-            padding-bottom: 60px;
-        }
-        
-        .team-members {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .member-card {
-            background: var(--accent);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            transition: transform 0.3s ease;
-            border: 2px solid var(--primary);
-        }
-        
-        .member-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .member-img {
-            height: 200px;
-            background: linear-gradient(45deg, var(--dark), var(--primary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 3px solid var(--highlight);
-        }
-        
-        .member-img i {
-            font-size: 6rem;
-            color: rgba(245, 222, 179, 0.7);
-        }
-        
-        .member-info {
-            padding: 25px;
-        }
-        
-        .member-info h3 {
-            font-size: 1.5rem;
-            color: var(--dark);
-            margin-bottom: 10px;
-            font-family: 'Palatino', serif;
-        }
-        
-        .member-info .role {
-            color: #555;
-            font-weight: 600;
-            margin-bottom: 15px;
-            display: block;
-        }
-        
-        .member-info p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
-        footer {
-            background-color: var(--dark);
-            color: var(--accent);
-            padding: 50px 0 20px;
-            text-align: center;
-            border-top: 3px solid var(--highlight);
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-section {
-            max-width: 300px;
-        }
-        
-        .footer-section h3 {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-            color: var(--accent);
-        }
-        
-        .footer-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background-color: var(--accent);
-        }
-        
-        .footer-section p {
-            margin-bottom: 15px;
-            color: #d2b48c;
-        }
-        
-        .footer-bottom {
-            padding-top: 20px;
-            border-top: 1px solid rgba(210, 180, 140, 0.1);
-            color: #d2b48c;
-        }
-
-        .donation-section .section-title h2,
-        .donation-section .section-title p {
-            color: var(--accent);
-        }
-        
-        .donation-section .section-title h2::after {
-            background-color: var(--accent);
-        }
-        
-       
         .poverty-section {
             background-color: white;
             padding: 80px 0;
@@ -498,12 +490,12 @@
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             border: 2px solid var(--primary);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .research-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
         
         .research-card h3 {
@@ -519,21 +511,7 @@
             color: var(--primary);
             margin: 15px 0;
             text-align: center;
-        }
-        
-        .book-icon {
-            text-align: center;
-            font-size: 3rem;
-            color: var(--primary);
-            margin: 20px 0;
-        }
-        
-        .book-quote {
-            font-style: italic;
-            padding: 20px;
-            border-left: 3px solid var(--primary);
-            margin: 20px 0;
-            background: rgba(139, 69, 19, 0.05);
+            transition: all 1s ease;
         }
         
         .causes-list {
@@ -542,7 +520,11 @@
             margin: 20px 0;
         }
         
-       
+        .causes-list li {
+            margin-bottom: 10px;
+            break-inside: avoid;
+        }
+        
         .contributions-section {
             background-color: var(--light);
             padding: 80px 0;
@@ -565,7 +547,7 @@
             border: 2px solid var(--primary);
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .contribution-card:hover {
@@ -693,105 +675,85 @@
             color: var(--primary);
             display: block;
             margin-bottom: 5px;
+            transition: all 1s ease;
         }
         
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .btn {
-                padding: 12px 25px;
-                font-size: 1rem;
-                margin-bottom: 10px;
-                display: block;
-                width: 100%;
-                max-width: 300px;
-                margin: 10px auto;
-            }
-            
-            .btn-secondary {
-                margin-left: 0;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .about-image {
-                width: 100%;
-            }
-            
-            .causes-list {
-                columns: 1;
-            }
-            
-            .contribution-content {
-                flex-direction: column;
-            }
-            
-            .contribution-image {
-                min-height: 250px;
-                border-right: none;
-                border-bottom: 2px solid var(--primary);
-            }
+        .donation-section {
+            background: linear-gradient(135deg, rgba(62, 39, 35, 0.9), rgba(139, 69, 19, 0.9)), url('https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-top: 3px solid var(--highlight);
+            border-bottom: 3px solid var(--highlight);
         }
         
-        @media (max-width: 480px) {
-            .hero {
-                padding: 80px 20px;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .stat-box {
-                min-width: 100%;
-            }
-        }
-
-        .khusheen-card {
-            background-color: #f8d7da;
-            border: 2px dashed #dc3545;
+        .donation-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
         
-        .khusheen-avatar {
-            background: linear-gradient(45deg, #dc3545, #f8d7da);
+        .step-card {
+            background: rgba(245, 222, 179, 0.1);
+            padding: 40px 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            border: 1px solid rgba(245, 222, 179, 0.3);
         }
         
-        .khusheen-title {
-            color: #dc3545;
+        .step-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(245, 222, 179, 0.15);
         }
         
-        .khusheen-stats .stat-item {
-            background-color: #f8d7da;
-            border: 1px dashed #dc3545;
+        .step-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: white;
         }
         
-        .khusheen-stats .number {
-            color: #dc3545;
+        .step-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
         }
-
+        
+        .donation-instructions {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(245, 222, 179, 0.3);
+            margin-top: 30px;
+        }
+        
+        .donation-instructions h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        
+        .donation-instructions ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .donation-instructions li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .donation-instructions li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
         .evidences-section {
             background-color: var(--light);
             padding: 80px 0;
@@ -802,57 +764,6 @@
         .evidences-container {
             max-width: 1200px;
             margin: 0 auto;
-        }
-        
-        .upload-area {
-            background-color: white;
-            border: 2px dashed var(--primary);
-            border-radius: 10px;
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 50px;
-            transition: all 0.3s ease;
-        }
-        
-        .upload-area:hover {
-            background-color: rgba(139, 69, 19, 0.05);
-        }
-        
-        .upload-icon {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .upload-text h3 {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 10px;
-            font-family: 'Palatino', serif;
-        }
-        
-        .upload-text p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-        
-        .upload-btn {
-            background-color: var(--accent);
-            color: var(--dark);
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-        
-        .upload-btn:hover {
-            background-color: #e6e6e6;
-        }
-        
-        #file-input {
-            display: none;
         }
         
         .evidence-grid {
@@ -866,13 +777,13 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 2px solid var(--primary);
         }
         
         .evidence-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
         
         .evidence-image {
@@ -951,13 +862,19 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 200;
+            z-index: 2000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         .modal-content {
@@ -969,6 +886,18 @@
             max-width: 800px;
             position: relative;
             border: 2px solid var(--primary);
+            animation: slideIn 0.4s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         
         .close-modal {
@@ -1017,97 +946,63 @@
             font-size: 0.9rem;
         }
         
-       
-        .evidence-form label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--primary);
-            font-weight: 600;
+        footer {
+            background-color: var(--dark);
+            color: var(--accent);
+            padding: 50px 0 20px;
+            text-align: center;
+            border-top: 3px solid var(--highlight);
         }
         
-        .evidence-form input,
-        .evidence-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid var(--primary);
-            border-radius: 5px;
-            font-family: 'Georgia', serif;
-        }
-        
-        .evidence-form textarea {
-            height: 120px;
-            resize: vertical;
-        }
-        
-        .form-buttons {
+        .footer-content {
             display: flex;
-            justify-content: flex-end;
-            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
         }
         
-        .form-btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+        .footer-section {
+            max-width: 300px;
         }
         
-        .form-btn.cancel {
-            background-color: #e6e6e6;
-            color: var(--dark);
-        }
-        
-        .form-btn.save {
-            background-color: var(--accent);
-            color: var(--dark);
-        }
-        
-        .form-btn.cancel:hover {
-            background-color: #d9d9d9;
-        }
-        
-        .form-btn.save:hover {
-            background-color: #d4c3a0;
-        }
-        
-       
-        .donation-instructions {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid rgba(245, 222, 179, 0.3);
-            margin-top: 30px;
-        }
-        
-        .donation-instructions h3 {
-            font-size: 1.8rem;
+        .footer-section h3 {
+            font-size: 1.4rem;
             margin-bottom: 20px;
-            color: var(--accent);
-        }
-        
-        .donation-instructions ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        .donation-instructions li {
-            margin-bottom: 15px;
-            padding-left: 30px;
             position: relative;
+            padding-bottom: 10px;
+            color: var(--accent);
         }
         
-        .donation-instructions li:before {
-            content: "✓";
+        .footer-section h3::after {
+            content: '';
             position: absolute;
-            left: 0;
-            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+        
+        .footer-section p {
+            margin-bottom: 15px;
+            color: #d2b48c;
+        }
+        
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid rgba(210, 180, 140, 0.1);
+            color: #d2b48c;
+        }
+        
+        .donation-section .section-title h2,
+        .donation-section .section-title p {
             color: var(--accent);
-            font-weight: bold;
+        }
+        
+        .donation-section .section-title h2::after {
+            background-color: var(--accent);
         }
         
         .team-intro {
@@ -1115,10 +1010,147 @@
             margin: 0 auto 50px;
             text-align: center;
         }
+        
+        .khusheen-card {
+            background-color: #f8d7da;
+            border: 2px dashed #dc3545;
+        }
+        
+        .khusheen-avatar {
+            background: linear-gradient(45deg, #dc3545, #f8d7da);
+        }
+        
+        .khusheen-title {
+            color: #dc3545;
+        }
+        
+        .khusheen-stats .stat-item {
+            background-color: #f8d7da;
+            border: 1px dashed #dc3545;
+        }
+        
+        .khusheen-stats .number {
+            color: #dc3545;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+                margin-bottom: 10px;
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 10px auto;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                width: 100%;
+            }
+            
+            .causes-list {
+                columns: 1;
+            }
+            
+            .contribution-content {
+                flex-direction: column;
+            }
+            
+            .contribution-image {
+                min-height: 250px;
+                border-right: none;
+                border-bottom: 2px solid var(--primary);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 80px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .stat-box {
+                min-width: 100%;
+            }
+        }
+        
+        /* Loading animation */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+        
+        #loading.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid var(--accent);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
-   
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -1134,14 +1166,13 @@
                         <li><a href="#contributions">Our Contributions</a></li>
                         <li><a href="#evidences">Evidences</a></li>
                         <li><a href="#donate">Donate</a></li>
-                      
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-   
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
             <h1>Supporting the Salvation Army in Hong Kong</h1>
@@ -1153,7 +1184,7 @@
         </div>
     </section>
 
-    
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="about-section">
@@ -1177,7 +1208,7 @@
                         </div>
                     </div>
                     <div class="about-image">
-                        <img src="data:image/png;base64,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" alt="Salvation Army Logo" style="max-width: 80%;">
+                        <img src="data:image/png;base64,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" alt="Salvation Army Logo" style="max-width: 80%;">
                     </div>
                 </div>
             </div>
@@ -1250,6 +1281,7 @@
         </div>
     </section>
 
+    <!-- Poverty Research Section -->
     <section id="research" class="poverty-section">
         <div class="container">
             <div class="section-title">
@@ -1312,7 +1344,7 @@
         </div>
     </section>
 
-    
+    <!-- Contributions Section -->
     <section id="contributions" class="contributions-section">
         <div class="container">
             <div class="section-title">
@@ -1321,7 +1353,6 @@
             </div>
             
             <div class="contributions-container">
-  
                 <div class="contribution-card">
                     <div class="contribution-header">
                         <div class="member-avatar">
@@ -1360,180 +1391,11 @@
                         </div>
                     </div>
                 </div>
-                
-                
-                
-  
+            </div>
+        </div>
+    </section>
 
-
-                    </div>
-                
-                
-                <div class="evidence-grid">
-                    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books for Hope | Salvation Army Donation Drive</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-       
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 1200px;
-            position: relative;
-            animation-name: modalFade;
-            animation-duration: 0.4s;
-        }
-
-        @keyframes modalFade {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
-        .close-modal {
-            color: #aaa;
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 30px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .close-modal:hover,
-        .close-modal:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .modal-image {
-            width: 100%;
-            max-height: 600px;
-            object-fit: contain;
-            margin: 20px 0;
-        }
-
-        .modal-details {
-            padding: 20px;
-        }
-
-        .modal-title {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .modal-description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #333;
-        }
-    </style>
-</head>
-<body>
-    
-    
-    
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books for Hope | Salvation Army Donation Drive</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-      
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 1200px;
-            position: relative;
-            animation-name: modalFade;
-            animation-duration: 0.4s;
-        }
-
-        @keyframes modalFade {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
-        .close-modal {
-            color: #aaa;
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 30px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .close-modal:hover,
-        .close-modal:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .modal-image {
-            width: 100%;
-            max-height: 600px;
-            object-fit: contain;
-            margin: 20px 0;
-        }
-
-        .modal-details {
-            padding: 20px;
-        }
-
-        .modal-title {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .modal-description {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #333;
-        }
-    </style>
-</head>
-<body>
-
+    <!-- Evidences Section -->
     <section id="evidences" class="evidences-section">
         <div class="container">
             <div class="section-title">
@@ -1542,7 +1404,6 @@
             </div>
 
             <div class="evidence-grid">
-             
                 <div class="evidence-card">
                     <div class="evidence-image">
                         <img src="https://cdn.glitch.global/9a2143d0-d249-4762-99a9-184d9360a9b8/book%20drive.jpg?v=1748785609887" alt="Book donation collection">
@@ -1585,7 +1446,7 @@
                     </div>
                 </div>
 
-                           <div class="evidence-card">
+                <div class="evidence-card">
                     <div class="evidence-image">
                         <img src="https://cdn.glitch.global/9a2143d0-d249-4762-99a9-184d9360a9b8/WhatsApp%20Image%202025-06-01%20at%2015.23.25.jpeg?v=1748787495150" alt="Salvation Army staff receiving donations">
                         <div class="evidence-overlay">
@@ -1602,6 +1463,7 @@
         </div>
     </section>
 
+    <!-- Modals -->
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
@@ -1687,30 +1549,6 @@
         </div>
     </div>
 
-
-    <script>
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = "block";
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-        }
-
-        // 
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = "none";
-            }
-        }
-    </script>
-</body>
-</html>
-
-
-          
-    </section>
-
     <!-- Donation Section -->
     <section id="donate" class="donation-section">
         <div class="container">
@@ -1746,7 +1584,124 @@
                     <li>Educational materials such as textbooks, workbooks, and puzzles are welcome</li>
                     <li>Toys should be clean, in good working condition, and appropriate for children</li>
                     <li>Donations can be dropped off at KGV School in May, 2025</li>
-              
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>A student-led initiative at KGV School to support the Salvation Army's educational programs through book donations.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: booksforhope@kgv.edu.hk</p>
+                    <p>KGV School, Kowloon, Hong Kong</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <p>Connect with us on social media for updates on our donation drive.</p>
+                    <div class="social-icons">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
             
-                  
-                 
+            <div class="footer-bottom">
+                <p>&copy; 2025 Books for Hope | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading animation
+        window.addEventListener('load', function() {
+            const loading = document.getElementById('loading');
+            setTimeout(() => {
+                loading.classList.add('fade-out');
+            }, 1000);
+        });
+
+        // Section reveal animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Stats animation
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateStats();
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            const statsSection = document.querySelector('.survey-section');
+            if (statsSection) statsObserver.observe(statsSection);
+        });
+
+        // Animate statistics
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-box h4, .stat-item .number, .research-card .stat');
+            
+            stats.forEach(stat => {
+                const target = +stat.innerText.replace(/[^0-9.]/g, '');
+                const suffix = stat.innerText.replace(/[0-9.]/g, '');
+                let start = 0;
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                
+                const update = () => {
+                    start += increment;
+                    if (start < target) {
+                        stat.innerText = Math.floor(start) + suffix;
+                        requestAnimationFrame(update);
+                    } else {
+                        stat.innerText = target + suffix;
+                    }
+                };
+                
+                update();
+            });
+        }
+
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
